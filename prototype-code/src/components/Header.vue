@@ -17,6 +17,7 @@ export default {
 .header{
   height: 10vh;
   width:70vw;
+  position: absolute;
   background-color: #1e1e1e;
   text-align: right;
   line-height: 10vh;

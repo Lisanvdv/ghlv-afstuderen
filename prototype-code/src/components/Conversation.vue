@@ -13,6 +13,8 @@ export default {
 <style scoped>
 .sidebar{
   width:30vw;
+  position: absolute;
+  right:0;
   height: 100vh;
   background-color: #FDFAFF;
 }
