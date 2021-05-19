@@ -1,14 +1,5 @@
 <template>
-  <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-  </div>
   <router-view />
-  <!-- <Header/>
-  <Bigcam/>
-  <Conversation/> -->
-
-   
 </template>
 
 <script>
@@ -42,5 +33,6 @@ body{
   width:100vw;
   height: 100vh;
   display: flex;
+  background-color: #161616;
 }
 </style>
