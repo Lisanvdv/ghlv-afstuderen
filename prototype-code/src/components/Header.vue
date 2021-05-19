@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <button class="btn-leave"><i class="fas fa-phone"></i> Leave call</button>
+    <router-link to="/finishedearly" class="btn-leave"><i class="fas fa-phone"></i> Leave call</router-link>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
   border: none;
   padding: 1% 2%;
   margin-right:1.25%;
-  
+  text-decoration: none;
 }
 
 .fa-phone{
