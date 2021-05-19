@@ -1,8 +1,8 @@
 <template>
 <div class="noflexbox">
-    <h1>Already done?</h1>
+    <h1>You've completed the video call!</h1>
 
-    <p style="margin-bottom:10%;">You stopped the video call with Nova prematurely. Do you not forget to fill in the survey? We would love to hear what went well and what didn't!</p>
+    <p style="margin-bottom:10%;">You have closed and finished the video call with Nova. Do you not forget to fill in the survey? We would love to hear what went well and what didn't!</p>
     
     <div class="btnflex">
         <a href="https://forms.gle/UQMF9Qw7LWtArGQZA" class="btn-leave">Fill in survey</a>
