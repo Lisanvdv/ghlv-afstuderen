@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BotUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="build/botui.mis.css" />
+    <link rel="stylesheet" href="build/botui-theme-default.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+        <a href="finishedearly.html" class="btn-leave"><i class="fas fa-phone"></i> Leave call</a>
+      </div>
+
+      <div class="camview">
+    </div>
+
+      <div class="sidebar">
+        <h3 style="color:#1e1e1e; text-align: center;">Conversation with Nova Green</h3>
+        <!--the botui interface-->
+          <div id="my-botui-app">
+            <bot-ui></bot-ui>
+          </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="build/botui.min.js"></script>
+
+    <script>
+      var botui = new BotUI('my-botui-app');
+
+        //add a message from the BOT
+      botui.message.add({
+        content: 'Hi! I’m Nova, the virtual trendwatcher of Greenhouse. Who are you?'
+      })
+        //create a button where the player can choose the answer, you can put as many answers in here as you want
+      botui.action.text({
+        action: {
+          placeholder: 'Your name...'
+      }
+
+      }).then(function (res) { // will be called when it is submitted.
+        botui.message.add({
+        content: 'Nice to meet you, ' + res.value + '! How are you?'
+      })
+
+      }).then(function (res) {
+        botui.action.button({
+        delay: 500,
+        action: [
+            {
+                text: 'I’m okay, how about you? ',
+                //only give it a value if you are going to use the value, see below
+                value: 'okay'
+            },
+            {
+                text: 'I’m feeling super fantastic! How are you?',
+                value: 'fantastic'
+            }
+        ]
+      }).then(function (res) {
+        //if the value is the same as the string, the functions will run
+        if (value = 'okay' || 'fantastic') {
+          botui.message.add({
+              content: 'I’m absolutely great, thank you! I’m working on such a cool project at work. I’m super enthusiastic about it. Do you want to know more about it?'
+        })
+      }
+      }).then(function (res) {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'Yes please!',
+                  //only give it a value if you are going to use the value, see below
+                  value: 'yesplease'
+              },
+              {
+                  text: 'Sure, why not?',
+                  value: 'sure'
+              }
+          ]
+        }).then(function (res) {
+          if (value = 'yesplease' || 'fantastic') {
+          botui.message.add({
+              content: 'So cool! Are you into trend watching?'
+        })
+        }
+      }).then(function (res) {
+        botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'Yes, but I don’t know that much about it',
+                  //only give it a value if you are going to use the value, see below
+                  value: 'dontknow'
+              },
+              {
+                  text: 'Yes, definitely!',
+                  value: 'definitely'
+              }
+          ]
+    }).then(function (res) {
+      if (value = 'dontknow' || 'definitely') {
+          botui.message.add({
+            content: 'I’m into it as well, and I made my job out of it. Currently I researching trends for the upcoming years. That’s how Greenhouse can stay relevant. I came across a lot cool trends and I don’t even know where to begin.'
+        })
+      }
+    }).then(function (res) {
+        botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'Let’s start with Deepfakes!',
+                  value: 'deepfake'
+              },
+              {
+                  text: 'Let’s start with Cryptocurrencies',
+                  value: 'crypto'
+              },
+              {
+                  text: 'Let’s start with Mixed Realities',
+                  value: 'mixedrealities'
+              }
+          ]
+        }).then(function (res) {
+    //if the value is the same as the string, the functions will run
+    if (res.value == 'deepfake') {
+        convostart.deepfol();
+    }
+    if (res.value == 'crypto') {
+        convostart.cryptofol();
+    }
+    if (res.value == 'mixedrealities') {
+        convostart.mixedfol();
+    }
+});
+    })})})});
+
+    var convostart = {
+    //a function is created for minor conversation points
+    deepfol: function () {
+        botui.message.add({
+            delay: 500,
+            content: 'My favourite subject! Did you know you that you can use everyones data to make something of them?'
+        //the function below is an input field for the player
+        }).then(function () {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'It sounds very scary!',
+                  //only give it a value if you are going to use the value, see below
+                  value: 'scary-deep'
+              },
+              {
+                  text: 'I didn`t know that ',
+                  value: 'idk'
+              }
+          ]
+        //use the then function if the bot has to say something after the player when there is value choice made, see above. If you don't do this, the program will run through the i.e. input field
+        }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'Yes it is a bit scary, isn’t it? But the AI’s are very good and the content they make is very funny. '
+            })
+        }).then(function () {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'Not all the AI`s are good. They use deepfakes to create harmfull content and trick people into telling stuff in confidentiallity...',
+                  //only give it a value if you are going to use the value, see below
+                  value: 'harmfullcontent'
+              },
+              {
+                  text: 'I don`t think so, what if they look like politicians and tell weird stuff. It hurt their carrieres.',
+                  value: 'dept-more'
+              }
+          ]
+        }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'That’s a problem indeed. But wait a second.. I’m made with AI....'
+            })
+        }) 
+      })
+    })  }   
+        // }).then(function () {
+        //   botui.action.button({
+        //   delay: 500,
+        //   action: [
+        //       {
+        //           text: 'That’s true, but is that a problem?',
+        //           //only give it a value if you are going to use the value, see below
+        //           value: 'deepproblem'
+        //       },
+        //       {
+        //           text: 'Yes, that`s different, right?',
+        //           value: 'dept-more'
+        //       }
+        //   ]
+        // })
+        // });
+      }
+
+  //   cryptofol: function () {
+  //       botui.message.add({
+  //           delay: 1500,
+  //           content: "I don't think I know you... Who are you?"
+  //       })
+  //       botui.message.add({
+  //           human: true,
+  //           delay: 2500,
+  //           content: 'My name is',
+  //       }).then(function () {
+  //           return botui.action.text({
+  //               delay: 500,
+  //               action: {
+  //                   placeholder: 'Your name'
+  //               }
+  //           });
+  //       })
+  //   },
+  //   mixedfol: function () {
+  //       botui.message.add({
+  //           delay: 1500,
+  //           content: "I don't think I know you... Who are you?"
+  //       })
+  //       botui.message.add({
+  //           human: true,
+  //           delay: 2500,
+  //           content: 'My name is',
+  //       }).then(function () {
+  //           return botui.action.text({
+  //               delay: 500,
+  //               action: {
+  //                   placeholder: 'Your name'
+  //               }
+  //           });
+  //       })
+  //   }
+  // }
+    </script>
+  </body>
+</html>

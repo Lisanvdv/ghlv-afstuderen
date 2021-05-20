@@ -1,0 +1,105 @@
+body{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    color: #1e1e1e;
+    background-color: #161616;
+  }
+
+.header{
+    height: 10vh;
+    width:70vw;
+    position: absolute;
+    background-color: #1e1e1e;
+    text-align: right;
+    line-height: 10vh;
+  }
+  
+.btn-leave{
+    background-color: #E30B5D;
+    color: white;
+    border: none;
+    padding: 1% 2%;
+    margin-right:1.25%;
+    text-decoration: none;
+  }
+  
+.fa-phone{
+    transform: rotate(225deg);
+  }
+
+.sidebar{
+    width:30vw;
+    position: absolute;
+    right:0;
+    height: 100vh;
+    background-color: #FDFAFF;
+  }
+
+h1, h2, h3, h4, h5, h6, p, a{
+    color: white;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
+
+.flex-box {
+    margin:auto;
+    display:flex;
+    width: 100%;
+    height:100vh;
+    }
+    
+.flex-item {
+    margin: auto 2%;
+    padding: 2%;
+    width: 50%;
+    height: 70%;
+    background-color: #1b1b1b;
+    text-align:center;
+    }
+    
+.btn, .btn-leave{
+    background-color: #E30B5D;
+    color: white;
+    border: none;
+    padding: 1% 2%;
+    text-decoration: none;
+}
+    
+.camera-view-self{
+    margin: auto;
+    height:250px;
+    width:80%;
+    border: #1e1e1e 1px solid;
+    margin-bottom: 5%;
+}
+    
+.min-text{
+    font-size:smaller;
+    padding-bottom:2%;
+}
+
+.camview{
+    margin-top: 10vh;
+    width: 70vw;
+    position: absolute;
+    background-color: green;
+    height: 90vh;
+}
+           
+.noflexbox{
+    display: block;
+    margin:15% 25%;
+    text-align: center;
+}
+            
+.btnflex{
+    display:flex;
+    margin: 10% 0;
+    text-align: center;
+}
+            
+.btnflex a{
+    margin: 0 5%;
+    width:50%;
+}
+            
