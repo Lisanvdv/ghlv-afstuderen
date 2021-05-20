@@ -3,16 +3,10 @@
 </template>
 
 <script>
-// import Header from './components/Header.vue'
-// import Conversation from './components/Conversation.vue'
-// import Bigcam from './components/Bigcam.vue'
 
 export default {
   name: 'App',
   components: {
-    // Header,
-    // Conversation,
-    // Bigcam
   }
 }
 </script>
