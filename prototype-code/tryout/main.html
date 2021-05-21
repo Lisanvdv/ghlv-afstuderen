@@ -171,12 +171,9 @@
           action: [
               {
                   text: 'Not all the AI`s are good. They use deepfakes to create harmfull content and trick people into telling stuff in confidentiallity...',
-                  //only give it a value if you are going to use the value, see below
-                  value: 'harmfullcontent'
               },
               {
                   text: 'I don`t think so, what if they look like politicians and tell weird stuff. It hurt their carrieres.',
-                  value: 'dept-more'
               }
           ]
         }).then(function () {
@@ -184,64 +181,225 @@
                 delay: 500,
                 content: 'That’s a problem indeed. But wait a second.. I’m made with AI....'
             })
-        }) 
-      })
-    })  }   
-        // }).then(function () {
-        //   botui.action.button({
-        //   delay: 500,
-        //   action: [
-        //       {
-        //           text: 'That’s true, but is that a problem?',
-        //           //only give it a value if you are going to use the value, see below
-        //           value: 'deepproblem'
-        //       },
-        //       {
-        //           text: 'Yes, that`s different, right?',
-        //           value: 'dept-more'
-        //       }
-        //   ]
-        // })
-        // });
-      }
+        }).then(function () {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'That’s true, but is that a problem?',
+                  //only give it a value if you are going to use the value, see below
+                  value: 'deepproblem'
+              },
+              {
+                  text: 'Yes, that`s different, right?',
+                  value: 'dept-more'
+              }
+          ]
+        }).then(function () {
+              convostart.dangfol();
+        })
+        });
+      })})
+    
+        
+    },
 
-  //   cryptofol: function () {
-  //       botui.message.add({
-  //           delay: 1500,
-  //           content: "I don't think I know you... Who are you?"
-  //       })
-  //       botui.message.add({
-  //           human: true,
-  //           delay: 2500,
-  //           content: 'My name is',
-  //       }).then(function () {
-  //           return botui.action.text({
-  //               delay: 500,
-  //               action: {
-  //                   placeholder: 'Your name'
-  //               }
-  //           });
-  //       })
-  //   },
-  //   mixedfol: function () {
-  //       botui.message.add({
-  //           delay: 1500,
-  //           content: "I don't think I know you... Who are you?"
-  //       })
-  //       botui.message.add({
-  //           human: true,
-  //           delay: 2500,
-  //           content: 'My name is',
-  //       }).then(function () {
-  //           return botui.action.text({
-  //               delay: 500,
-  //               action: {
-  //                   placeholder: 'Your name'
-  //               }
-  //           });
-  //       })
-  //   }
-  // }
+    cryptofol: function () {
+        botui.message.add({
+            delay: 500,
+            content: "I really like this subject because I can pay digital. First it was very easy to access it as a digital human. You didn’t  have to have a identity card. Since a couple of years it has been more secure. "
+          }).then(function () {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'But isn’t cryptocurrencies for criminals?',
+              },
+              {
+                  text: 'Cool! Never tried it, to be honest.',
+              }
+          ]
+        }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'There has been a lot of prejudices around cryptocurrencies. But all the data is stored in the blockchain. A criminal wouldn’t want that, since his information is then stored forever.'
+            })
+        }).then(function () {
+          botui.action.button({
+          delay: 500,
+          action: [
+              {
+                  text: 'Cool to know! In what kind of cryptocurrencies have you invested in?',
+              },
+              {
+                  text: 'I`m not sure about that. But anyways, what did you invest in?',
+              }
+          ]
+        }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'Bitcoin and Virtual Human Money. I use Bitcoins for NTF’s for digital clothes and stuff. VHM is more for fun things to do. '
+              }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'Technology is so cool these days! I love that you are developing this way. What are you latest updates?',
+                  },
+                  {
+                      text: 'Never heard of it... How are your creators creating you?',
+                  }
+              ]
+            }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'They are working on making me answer autonomously and making me look more human.'
+              }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'That’s very interesting! Do you want to be more humanlike?',
+                  },
+                  {
+                      text: 'Do you want that?',
+                  }
+              ]
+                })
+              })
+            }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
+              })
+            })
+          }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'I think your makers will work it out. It is truly amazing what technology can do these days.',
+                  },
+                  {
+                      text: 'I don`t think you will!',
+                  }
+              ]}).then(function () {
+              convostart.dangfol();
+          })
+          })
+        })
+      })
+      })
+    },
+    mixedfol: function () {
+        botui.message.add({
+            delay: 500,
+            content: "Okey cool! Did you know you could extend reality, but you could also removed things from reality?"
+        }).then(function () {
+          botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'No I didn’t.',
+                  },
+                  {
+                      text: 'I only knew about VR & AR.',
+                  }
+              ]
+            }).then(function () {
+              botui.message.add({
+                delay: 500,
+                content: "The best example is noise cancelling headphones. You remove the noise and hear nothing instead. "
+              }).then(function () {
+          botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'Sounds cool. A hologram is just like that',
+                  },
+                  {
+                      text: 'Just like a hologram?',
+                  }
+              ]
+            }).then(function () {
+              botui.message.add({
+                delay: 500,
+                content: "A hologram extends the reality with his presence. Like me: you are talking to a screen but we could also talk in person."
+              }).then(function () {
+          botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'That’s impressive! Did your makers already make that for you?',
+                  },
+                  {
+                      text: 'Do you already have a hologram?',
+                  }
+              ]
+            }) }).then(function () {
+              botui.message.add({
+                delay: 500,
+                content: "No, they are first working on a digital brain. That’s a very complex subject to make me think and react more humanlike."
+              })}).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'That’s very interesting! Do you want to be more humanlike?',
+                  },
+                  {
+                      text: 'Do you want that?',
+                  }
+              ]
+                })
+              })
+            }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
+              })
+            })
+          }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'I think your makers will work it out. It is truly amazing what technology can do these days.',
+                  },
+                  {
+                      text: 'I don`t think you will!',
+                  }
+              ]
+            }).then(function () {
+              convostart.dangfol();
+          })})
+        })
+      })
+    },
+    dangfol: function () {
+        botui.message.add({
+            delay: 500,
+            content: "But what if I’m dangerous? How do I know what is good and what is bad?"
+          }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'I don’t think Greenhouse would hire a bad AI...',
+                  },
+                  {
+                      text: 'You’ve been made by someone, I’m sure they knew what they were doing.',
+                  },
+                  {
+                      text: 'I know the people how made you. They wouldn’t make you bad. ',
+                  }
+              ]
+            })
+          })
+      }
+  }
+    
+  
     </script>
   </body>
 </html>
