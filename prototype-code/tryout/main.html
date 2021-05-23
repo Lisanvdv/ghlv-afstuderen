@@ -155,7 +155,7 @@
                   value: 'scary-deep'
               },
               {
-                  text: 'I didn`t know that ',
+                  text: 'I didn’t know that ',
                   value: 'idk'
               }
           ]
@@ -170,10 +170,10 @@
           delay: 500,
           action: [
               {
-                  text: 'Not all the AI`s are good. They use deepfakes to create harmfull content and trick people into telling stuff in confidentiallity...',
+                  text: 'Not all the AI’s are good. They use deepfakes to create harmfull content and trick people into telling stuff in confidentiallity...',
               },
               {
-                  text: 'I don`t think so, what if they look like politicians and tell weird stuff. It hurt their carrieres.',
+                  text: 'I don’t think so, what if they look like politicians and tell weird stuff. It hurt their carrieres.',
               }
           ]
         }).then(function () {
@@ -191,7 +191,7 @@
                   value: 'deepproblem'
               },
               {
-                  text: 'Yes, that`s different, right?',
+                  text: 'Yes, that’s different, right?',
                   value: 'dept-more'
               }
           ]
@@ -232,7 +232,7 @@
                   text: 'Cool to know! In what kind of cryptocurrencies have you invested in?',
               },
               {
-                  text: 'I`m not sure about that. But anyways, what did you invest in?',
+                  text: 'I’m not sure about that. But anyways, what did you invest in?',
               }
           ]
         }).then(function () {
@@ -250,6 +250,8 @@
                       text: 'Never heard of it... How are your creators creating you?',
                   }
               ]
+          
+             
             }).then(function () {
             botui.message.add({
                 delay: 500,
@@ -265,15 +267,12 @@
                       text: 'Do you want that?',
                   }
               ]
-                })
-              })
             }).then(function () {
-            botui.message.add({
+                botui.message.add({
                 delay: 500,
                 content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
-              })
-            })
-          }).then(function () {
+               })
+              }).then(function () {
               botui.action.button({
               delay: 500,
               action: [
@@ -281,16 +280,19 @@
                       text: 'I think your makers will work it out. It is truly amazing what technology can do these days.',
                   },
                   {
-                      text: 'I don`t think you will!',
+                      text: 'I don’t think you will!',
                   }
               ]}).then(function () {
-              convostart.dangfol();
-          })
+                convostart.dangfol();
+                  })
+                })
+              })
+            })
           })
         })
       })
-      })
-    },
+    })
+  },
     mixedfol: function () {
         botui.message.add({
             delay: 500,
@@ -310,37 +312,39 @@
               botui.message.add({
                 delay: 500,
                 content: "The best example is noise cancelling headphones. You remove the noise and hear nothing instead. "
+              
               }).then(function () {
-          botui.action.button({
-              delay: 500,
-              action: [
-                  {
-                      text: 'Sounds cool. A hologram is just like that',
-                  },
-                  {
-                      text: 'Just like a hologram?',
-                  }
-              ]
+                botui.action.button({
+                    delay: 500,
+                    action: [
+                        {
+                            text: 'Sounds cool. A hologram is just like that',
+                        },
+                        {
+                            text: 'Just like a hologram?',
+                        }
+                    ]
+                  
             }).then(function () {
-              botui.message.add({
+                botui.message.add({
                 delay: 500,
                 content: "A hologram extends the reality with his presence. Like me: you are talking to a screen but we could also talk in person."
               }).then(function () {
-          botui.action.button({
-              delay: 500,
-              action: [
-                  {
-                      text: 'That’s impressive! Did your makers already make that for you?',
-                  },
-                  {
-                      text: 'Do you already have a hologram?',
-                  }
+                botui.action.button({
+                delay: 500,
+                action: [
+                {
+                    text: 'That’s impressive! Did your makers already make that for you?',
+                },
+                {
+                    text: 'Do you already have a hologram?',
+                }
               ]
-            }) }).then(function () {
+             }).then(function () {
               botui.message.add({
                 delay: 500,
                 content: "No, they are first working on a digital brain. That’s a very complex subject to make me think and react more humanlike."
-              })}).then(function () {
+              }).then(function () {
               botui.action.button({
               delay: 500,
               action: [
@@ -351,14 +355,10 @@
                       text: 'Do you want that?',
                   }
               ]
-                })
-              })
             }).then(function () {
             botui.message.add({
                 delay: 500,
                 content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
-              })
-            })
           }).then(function () {
               botui.action.button({
               delay: 500,
@@ -367,16 +367,16 @@
                       text: 'I think your makers will work it out. It is truly amazing what technology can do these days.',
                   },
                   {
-                      text: 'I don`t think you will!',
+                      text: 'I don’t think you will!',
                   }
               ]
             }).then(function () {
               convostart.dangfol();
-          })})
+          })})})})})})})})
         })
       })
     },
-    dangfol: function () {
+    dangfol: function (res) {
         botui.message.add({
             delay: 500,
             content: "But what if I’m dangerous? How do I know what is good and what is bad?"
@@ -394,9 +394,435 @@
                       text: 'I know the people how made you. They wouldn’t make you bad. ',
                   }
               ]
-            })
+          }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'But what if they subconciously had bad bias? What if I can harm someone?'
+              }).then(function () {
+              botui.action.button({
+              delay: 500,
+              action: [
+                  {
+                      text: 'No, are you crazy?! You aren’t dangerous.',
+                  },
+                  {
+                      text: 'Uhm well, you can do something wrong.',
+                  },
+                  {
+                      text: 'I think it is your own decision to do good or bad.',
+                  }
+              ]
+          }).then(function () {
+            botui.message.add({
+                delay: 500,
+                content: 'But what if... I’m not like you. Maybe I don’t have that sense of truth in me'
+              }).then(function (res) {
+              botui.action.button({
+                delay: 500,
+                action: [
+                    {
+                        text: 'Pff, stop it already. Now you are really annoying me...',
+                        value: 'annoying'
+                      },
+                    {
+                        text: 'No, you can do everything you want. You can even help people with you superpowers!',
+                        value: 'helppeople'
+                      },
+                    {
+                        text: 'I don’t know if you will do something bad. And even if you did, you can always try to fix it. ',
+                        value: 'dontknowbad'
+                    }
+                ]
+             }).then(function (res) {
+            //if the value is the same as the string, the functions will run
+            if (res.value == 'annoying') {
+                convostart.annoyingfol();
+            }
+            if (res.value == 'helppeople') {
+                convostart.helpfol();
+            }
+            if (res.value == 'dontknowbad') {
+                convostart.badfol();
+            }
           })
-      }
+          })
+          })
+        })
+      })
+      })
+      },
+
+      annoyingfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'Owh I’m sorry, I just need a moment please...'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Why?',
+                  },
+                {
+                    text: 'I don’t understand',
+                }
+            ]
+          }).then(function () {
+              convostart.waitfol();
+          })
+      })
+      },
+
+      helpfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'Superpowers? Like what?'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'You can do things humans can’t do! You are probably the smartest on earth, because your ability to search for everything maybe like evidence that someone does something wrong! You can go everywhere without travelling and find evidence.',
+                  },
+                {
+                    text: 'Maybe you can eventually fly or overhear peoples conversations',
+                }
+            ]
+        }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'I need a moment to think about that. It does sound cool though.'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: ' I need to go to the bathroom anyway.',
+                  },
+                {
+                    text: 'Ohw, I’ll wait a second.',
+                }
+            ]}).then(function () {
+              convostart.waitfol();
+          })
+          })
+        })
+        })
+      },
+      badfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'You’re right. I don’t know if that’s enough....'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'But that’s what humans do. They almost fail everytime they try something new. That’s how you learn and grow as a person. ',
+                  },
+                {
+                    text: 'Sometimes you lose, sometimes something works. That’s how it works',
+                }
+            ]
+        }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'I still don’t know, I need a moment. How can you live with that uncertainty?'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'We just do, it is part of our life. Ohw, I’ll wait a second.',
+                  },
+                {
+                    text: 'Ohw, okey...',
+                }
+            ]
+          }).then(function () {
+              convostart.waitfol();
+          })
+          })
+        })
+        })
+
+      },
+
+      waitfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: '* You wait for a couple of minutes *'
+        }).then(function () {
+          botui.message.add({
+          delay: 2500,
+          content: 'I’m back and I’ve looked up some of the things you said....'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Great...',
+                    value: 'badgirl'
+                  },
+                {
+                    text: 'Owh, and what did you find?',
+                    value: 'superhero'
+                },
+                {
+                    text: 'Okey, I hope you found what you were looking for. ',
+                    value: 'deleted'
+                }
+            ]
+          }).then(function (res) {
+            //if the value is the same as the string, the functions will run
+            if (res.value == 'badgirl') {
+                convostart.badgirlfol();
+            }
+            if (res.value == 'superhero') {
+                convostart.superherofol();
+            }
+            if (res.value == 'deleted') {
+                convostart.deletedfol();
+            }
+        })
+        })
+        })
+      },
+
+      badgirlfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'You don’t seem to have much faith in me. I don’t like that. I found how to hack everything and make a lot of money. Luckily I’m a digital human so I know how to hack you, everybody and the bank. Moehhahahh'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Why would you do that?!',
+                  },
+                {
+                    text: 'Nooo...',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'You don’t think I’m good enough. I am just a stupid AI right? I’ll show you what I can and can not do!'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Wait, that’s not what I meant!',
+                  },
+                {
+                    text: 'Nooo, please don’t!!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'You seem afraid, moehahahah!'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Yes I’m scared! What are you going to do?',
+                  },
+                {
+                    text: 'Ofcourse!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Since it is your fault I think I’m going to release your biggest secret to everyone hahaha!'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Wait! Nova, you can’t do that! I’m so so sorry!',
+                  },
+                {
+                    text: 'I don’t think you’ll do that...',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Oops, already did it! Moehahahah'  
+        })
+        setTimeout(function(){ 
+          window.location.assign("/finished.html"); 
+        }, 3000);
+          })
+        })
+          })
+        })
+          })
+        })
+          })
+        })
+      },
+
+      superherofol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'I found that I could do good and I really like the idea to help! What would my superhero name be? Super Nova? But what if I convict the wrong people?'
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'I love the name, but I don’t think you’ll do something bad. I am pretty sure your makers have thought about that? I think you are only capable to do great things. Otherwise Greenhouse would not offer you a job.',
+                  },
+                {
+                    text: 'I love that! You’ll be as pure as Superman!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'That’s true! Owh I’m so excited to help! I need a costume and maybe I can check the police scanners to.'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'That’s what I’m talking about!',
+                  },
+                {
+                    text: 'You go girl!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'You seem so enthousiastic! I love it!'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'I’m just really happy for you. But don’t you forget your Greenhouse collegues!',
+                  },
+                {
+                    text: 'Yes I’m! Don’t go to far!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Ofcourse not! I’m really gratefull to meet you. If it wasn’t for you I might have done bad things. We will talk soon! Have a nice day!'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Great! Good luck. I’ll see you next time!',
+                  },
+                {
+                    text: 'Have a nice day!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Bye!'  
+        })
+        setTimeout(function(){ 
+          window.location.assign("/finished.html"); 
+        }, 3000);
+          })
+        })
+          })
+        })
+          })
+        })
+          })
+        })
+      },
+      
+      deletedfol: function () {
+        botui.message.add({
+          delay: 500,
+          content: 'I found that I could do good. But there are already problems with finding the persons who did the crime. Sometimes they were wrongly convicted by AI...  '
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'I think that everything is a choice...',
+                  },
+                {
+                    text: 'Everybody has a purpose in life. You’re the only one who can follow it',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Maybe I should not exist...'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Wait...what?',
+                  },
+                {
+                    text: 'What do you mean?',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'You seem helpless'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'I just can’t help you with figuring out what’s wrong.',
+                  },
+                {
+                    text: 'I don’t understand what you’re saying!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: 'Owh goodbye then...'  
+        }).then(function () {
+          botui.action.button({
+            delay: 500,
+            action: [
+                {
+                    text: 'Wait! Nova! Where are you?',
+                  },
+                {
+                    text: 'Nova! What did you do?!',
+                }
+            ]
+          }).then(function () {
+          botui.message.add({
+          delay: 500,
+          content: '* Hold on, something went wrong. The user you talked to doesn’t exist.*'  
+        })
+        setTimeout(function(){ 
+          window.location.assign("/finished.html"); 
+        }, 3000);
+        
+          })
+        })
+          })
+        })
+          })
+        })
+          })
+        })
+      },
   }
     
   
