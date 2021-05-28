@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+</head>
+<body>
+    <div id="container">
+        <video style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;" autoplay="true" id="videoElement">
+        </video>
+        <canvas style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;"></canvas>
+    <script>
+        //Source:    https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
+        // Source: https://heartbeat.fritz.ai/real-time-human-pose-estimation-with-tensorflow-js-51da62b68d3a
+        // Source: https://www.youtube.com/watch?v=PyxsziqatFE
+        var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+
+const webcamRef = ref();
+  // const canvasRef = Ref(null);
+
+  //  Load posenet
+  const runPosenet = async () => {
+    const net = await posenet.load({
+      inputResolution: { width: 640, height: 480 },
+      scale: 0.8,
+    });
+    //
+    setInterval(() => {
+      detect(net);
+    }, 100);
+  };
+
+  const detect = async (net) => {
+    if (
+      typeof webcamRef.current !== "undefined" &&
+      webcamRef.current !== null &&
+      webcamRef.current.video.readyState === 4
+    ) {
+      // Get Video Properties
+      const video = webcamRef.current.video;
+      const videoWidth = webcamRef.current.video.videoWidth;
+      const videoHeight = webcamRef.current.video.videoHeight;
+
+      // Set video width
+      webcamRef.current.video.width = videoWidth;
+      webcamRef.current.video.height = videoHeight;
+
+      // Make Detections
+      const pose = await net.estimateSinglePose(video);
+      console.log(pose);
+
+      drawCanvas(pose, video, videoWidth, videoHeight, canvasRef);
+    }
+  };
+
+  const drawCanvas = (pose, video, videoWidth, videoHeight, canvas) => {
+    const ctx = canvas.current.getContext("2d");
+    canvas.current.width = videoWidth;
+    canvas.current.height = videoHeight;
+
+    drawKeypoints(pose["keypoints"], 0.6, ctx);
+    drawSkeleton(pose["keypoints"], 0.7, ctx);
+}
+
+  runPosenet();
+    </script>
+</body>
+</html>
