@@ -11,9 +11,9 @@
 </head>
 <body>
     <div id="container">
-        <video style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;" autoplay="true" id="videoElement">
+        <video ref={webcamRef} style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;" autoplay="true" id="videoElement">
         </video>
-        <canvas style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;"></canvas>
+        <canvas ref="canvasRef" style="position:absolute; margin-left: auto; margin-right:auto; left:0; top:0; text-align: center; z-index: 9; width:640px; height:480;"></canvas>
     <script>
         //Source:    https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
         // Source: https://heartbeat.fritz.ai/real-time-human-pose-estimation-with-tensorflow-js-51da62b68d3a
@@ -30,7 +30,11 @@ if (navigator.mediaDevices.getUserMedia) {
     });
 }
 
-const webcamRef = ref();
+const webcamRef = ref(null);
+onMounted(() => {
+      console.log("div: ", webcamRef.value);
+    });
+
   // const canvasRef = Ref(null);
 
   //  Load posenet
