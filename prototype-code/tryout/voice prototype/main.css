@@ -107,3 +107,11 @@ h1, h2, h3, h4, h5, h6, p, a{
     height: 89vh;
     max-height: 89vh;
 }
+
+#videoElement{
+    height:220px;
+}
+
+#videoElement video{
+    width: 340px;
+}

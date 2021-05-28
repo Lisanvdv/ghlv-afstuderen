@@ -8,27 +8,24 @@
     <link rel="stylesheet" href="build/botui-theme-default.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
+
   <body>
-
     <div class="flex-box">
-
       <div class="flex-item">
           <h2>Welcome!</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu urna ac justo hendrerit tincidunt vitae sit amet mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam pellentesque interdum vestibulum. Ut cursus neque eget orci 
-          imperdiet, eget efficitur mauris posuere. Phasellus nec sem vel massa tristique egestas. Maecenas et eros vitae sem ornare ullamcorper. Integer vehicula risus nec mauris fringilla, vitae tristique lorem feugiat. Morbi sed efficitur purus.</p>
+          <p>Digital humans are an upcoming trend. Some of them are advanced and are comfortable to look at, but others miss human characteristics. What makes a digital human humanlike and how can they interact fluently? In this prototype you are going to have a conversation with Nova Green, the digital trendwatcher of Greenhouse. She is a digital human in development and with this prototype can be researched what is needed to make her more humanlike. </p>
       </div>
 
       <div class="flex-item">
           <h2>Your call with Nova Green is about to start</h2>
           <p class="min-text">Read the description on the left before entering the video call</p>
-          <div class="camera-view-self"></div>
+          <!-- Source: https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm -->
+          <div class="camera-view-self">
+            <video autoplay="true" id="videoElement"></video>
+          </div>
           <a href="main.html" class="btn">Join now</a>
       </div>
-
-  </div>
-
-
-    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
-    <script src="build/botui.min.js"></script>
+    </div>
+    <script src="cameraview.js"></script>
   </body>
 </html>
