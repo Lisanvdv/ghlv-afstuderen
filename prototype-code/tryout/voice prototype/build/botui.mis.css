@@ -30,6 +30,8 @@ button.botui-actions-buttons-button, input.botui-actions-text-input {
 
 button.botui-actions-buttons-button{
     color: white;
+    background-color: #33a39b;
+    box-shadow: rgb(0 0 0 / 35%) 2px 3px 4px 0px;
 }
 
 button.botui-actions-buttons-button::-moz-focus-inner, input.botui-actions-text-input::-moz-focus-inner {
@@ -77,8 +79,6 @@ button.botui-actions-buttons-button {
         background-image: url("mobilefirst.png");
         background-position: center;
         background-size: 100% 100%;
-        border-radius: 5px;
-        border: solid 5px #1D1D1D;
         margin-top: 5vh;
     }
 }
@@ -89,8 +89,6 @@ button.botui-actions-buttons-button {
         height: 90vh;
         margin: 0 auto;
         background-image: none;
-        border-radius: none;
-        border: none;
         margin-top: 5vh;
     }
 }
@@ -101,8 +99,6 @@ button.botui-actions-buttons-button {
         height: 52vh;
         margin: 0 auto;
         background-image: none;
-        border-radius: none;
-        border: none;
         margin-top: 20vh;
     }
 }
@@ -128,64 +124,59 @@ button.botui-actions-buttons-button {
 
 .botui-message {
     margin: 10px 0;
-    min-height: 20px
+    min-height: 20px;
 }
 
 .botui-message:after {
     display: block;
     content: "";
-    clear: both
+    clear: both;
 }
 
 .botui-message-content {
     width: auto;
     max-width: 75%;
-    display: inline-block
+    display: inline-block;
 }
 
 .botui-message-content.human {
-    float: right
+    float: right;
 }
 
 .botui-message-content iframe {
-    width: 100%
+    width: 100%;
 }
 
 .botui-message-content-image {
     margin: 5px 0;
     display: block;
     max-width: 200px;
-    max-height: 200px
+    max-height: 200px;
 }
 
 .botui-message-content-link {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .profil {
     position: relative;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .profil.human {
     float: right;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .profil.agent {
     float: left;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 .profil>img {
     width: 26px;
     height: 26px;
-    border: 2px solid #e8e8e8
-}
-
-.profil>img.agent {
-    content: url(http://decodemoji.com/img/logos/blue_moji_hat.svg);
-    border-radius: 50%
+    border: 2px solid #e8e8e8;
 }
 
 button.botui-actions-buttons-button {
