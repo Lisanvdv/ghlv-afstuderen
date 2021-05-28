@@ -25,7 +25,11 @@ button.botui-actions-buttons-button, input.botui-actions-text-input {
     font-size: 100%;
     line-height: normal;
     vertical-align: baseline;
-    color: #DF63EF;
+    color: #B498C7;
+}
+
+button.botui-actions-buttons-button{
+    color: white;
 }
 
 button.botui-actions-buttons-button::-moz-focus-inner, input.botui-actions-text-input::-moz-focus-inner {
