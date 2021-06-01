@@ -1,14 +1,11 @@
 body{
     margin:0;
+    margin-top: 2vh;
     padding:0;
     overflow: hidden;
     color: #1e1e1e;
     background-color: #161616;
     box-sizing: border-box;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 
@@ -122,7 +119,13 @@ h1, h2, h3, h4, h5, h6, p, a{
     width: 340px;
 }
 
-canvas {
+/* canvas {
     position: absolute;
   }
-  
+   */
+
+#video{
+    position: relative;
+    margin-top: -110vh;
+    padding-left: 50vw;
+}

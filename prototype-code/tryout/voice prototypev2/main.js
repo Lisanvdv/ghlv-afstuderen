@@ -1,3 +1,46 @@
+// DEZE WERKT NUUUUU
+const video = document.getElementById("video");
+let predictedAges = [];
+var emotion;
+
+Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
+  faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+  faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+  faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+]).then(startVideo);
+
+function startVideo() {
+  navigator.getUserMedia(
+    { video: {} },
+    stream => (video.srcObject = stream),
+    err => console.error(err)
+  );
+}
+
+video.addEventListener("playing", () => {
+  const canvas = faceapi.createCanvasFromMedia(video);
+  document.body.append(canvas);
+
+  const displaySize = { width: video.width, height: video.height };
+  faceapi.matchDimensions(canvas, displaySize);
+
+  setInterval(async () => {
+    const detections = await faceapi
+      .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+      .withFaceLandmarks()
+      .withFaceExpressions()
+
+      let obj = Object(detections[0].expressions);
+      var max = Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b);
+      // max2 = max;
+      emotion = max;
+   
+  }, 1000);
+});
+
+
+
 var botui = new BotUI('my-botui-app');
     //add a message from the BOT
   botui.message.add({
@@ -11,7 +54,7 @@ var botui = new BotUI('my-botui-app');
   }).then(function (res) { // will be called when it is submitted.
     // vidchangeKNIK()
     botui.message.add({
-    content: 'Nice to meet you, ' + res.value + '! How are you?'
+    content: 'Nice to meet you, ' + res.value + '! How are you? you are'
   })
   }).then(function () {
     // vidchangeLUIST()
@@ -668,7 +711,7 @@ var botui = new BotUI('my-botui-app');
           // vidchangeKNIK()
             botui.message.add({
               delay: 700,
-              content: 'You seem afraid, moehahahah!'  
+              content: 'You seem ' + emotion + ', moehahahah!'  
         }).then(function () {
             botui.action.button({
               delay: 700,
@@ -753,9 +796,11 @@ var botui = new BotUI('my-botui-app');
               ]
         }).then(function () {
           // vidchangeKNIK()
+          getEmotion(max);
+          console.log(max);
             botui.message.add({
               delay: 700,
-              content: 'You seem so enthusiastic! I love it!'  
+              content: 'You seem so ' + emotion + '! I love it!'  
         }).then(function () {
             botui.action.button({
               delay: 700,
@@ -841,7 +886,7 @@ var botui = new BotUI('my-botui-app');
               // vidchangeKNIK()
                 botui.message.add({
                   delay: 700,
-                  content: 'You seem helpless'  
+                  content: 'You seem ' + emotion + '.'  
           }).then(function () {
               botui.action.button({
                 delay: 700,
@@ -891,4 +936,5 @@ var botui = new BotUI('my-botui-app');
     }
   }
     
-  
+
+
