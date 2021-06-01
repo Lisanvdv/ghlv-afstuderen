@@ -9,12 +9,12 @@ var botui = new BotUI('my-botui-app');
       placeholder: 'Just enter your name...'
   }
   }).then(function (res) { // will be called when it is submitted.
-    vidchangeKNIK()
+    // vidchangeKNIK()
     botui.message.add({
     content: 'Nice to meet you, ' + res.value + '! How are you?'
   })
   }).then(function () {
-    vidchangeLUIST()
+    // vidchangeLUIST()
     botui.action.button({
     delay: 700,
     action: [
@@ -29,7 +29,7 @@ var botui = new BotUI('my-botui-app');
         }
     ]
   }).then(function () {
-    vidchangeKNIK()
+    // vidchangeKNIK()
     //if the value is the same as the string, the functions will run
     if (value = 'okay' || 'fantastic') {
       botui.message.add({
@@ -37,7 +37,7 @@ var botui = new BotUI('my-botui-app');
     })
   }
   }).then(function (res) {
-      vidchangeLUIST()
+      // vidchangeLUIST()
       botui.action.button({
       delay: 700,
       action: [
@@ -52,14 +52,14 @@ var botui = new BotUI('my-botui-app');
           }
       ]
     }).then(function (res) {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         if (value = 'yesplease' || 'fantastic') {
         botui.message.add({
             content: 'So cool! Are you into trend watching?'
         })
       }
     }).then(function (res) {
-      vidchangeLUIST()
+      // vidchangeLUIST()
       botui.action.button({
         delay: 700,
         action: [
@@ -74,14 +74,14 @@ var botui = new BotUI('my-botui-app');
             }
           ]
     }).then(function (res) {
-      vidchangeKNIK()
+      // vidchangeKNIK()
       if (value = 'dontknow' || 'definitely') {
           botui.message.add({
             content: 'I am into it as well, and I made my job out of it. Currently I researching trends for the upcoming years. That is how Greenhouse can stay relevant. I came across a lot cool trends and I don’t even know where to begin.'
         })
       }
     }).then(function (res) {
-      vidchangeLUIST()
+      // vidchangeLUIST()
         botui.action.button({
           delay: 700,
           action: [
@@ -118,13 +118,13 @@ var botui = new BotUI('my-botui-app');
   var convostart = {
       //a function is created for minor conversation points
       deepfol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
           botui.message.add({
             delay: 700,
-            content: 'My favourite subject! Did you know you that you can use everyones data to make something of them? Maybe you`ve seen the video of Obama talking about something he never said? That`s a deepfake'
+            content: 'My favourite subject! Did you know you that you can use everyones data to make something of them? Maybe you`ve seen the video of Obama talking about something he never said? That`s a deepfake.'
           //the function below is an input field for the player
           }).then(function () {
-            vidchangeLUIST()
+            // vidchangeLUIST()
             botui.action.button({
             delay: 700,
             action: 
@@ -135,38 +135,38 @@ var botui = new BotUI('my-botui-app');
                     value: 'scary-deep'
                 },
                 {
-                    text: 'I didn’t know that ',
+                    text: 'I didn’t know that.',
                     value: 'idk'
                 }
               ]
           //use the then function if the bot has to say something after the player when there is value choice made, see above. If you don't do this, the program will run through the i.e. input field
           }).then(function () {
-            vidchangeKNIK()
+            // vidchangeKNIK()
               botui.message.add({
                   delay: 700,
                   content: 'Yes it is a bit scary, isn’t it? But the AI’s are very good and the content they make is very funny. '
               })
           }).then(function () {
-            vidchangeLUIST()
+            // vidchangeLUIST()
             botui.action.button({
             delay: 700,
             action: 
               [
                 {
-                    text: 'Not all the AI’s are trustworthy. They use deepfakes to create harmfull content and trick people into telling stuff in confidentiallity...',
+                    text: 'Not all the AI’s are trustworthy. They use deepfakes to create harmful content and trick people into telling stuff in confidentiality...',
                 },
                 {
                     text: 'I don’t think so, what if they look like politicians and tell weird stuff. It hurt their carrieres.',
                 }
               ]
           }).then(function () {
-            vidchangeKNIK()
+            // vidchangeKNIK()
               botui.message.add({
                   delay: 700,
-                  content: 'That is a problem indeed. But wait a second.. I am made with AI....'
+                  content: 'That is a problem indeed. But wait a second.. I was made with AI....'
               })
           }).then(function () {
-            vidchangeLUIST()
+            // vidchangeLUIST()
             botui.action.button({
             delay: 700,
             action: 
@@ -190,12 +190,12 @@ var botui = new BotUI('my-botui-app');
   },
 
       cryptofol: function () {
-        vidchangeLUIST()
+        // vidchangeLUIST()
           botui.message.add({
               delay: 700,
-              content: "I really like this subject because I can pay digital. First it was very easy to access it as a digital human. You didn’t  have to have a identity card. Since a couple of years it has been more secure. "
+              content: "I really like this subject because I can pay digital. First it was very easy to access it as a digital human. You didn’t have to have an identity card. Since a couple of years it has been more secure. "
             }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
             botui.action.button({
             delay: 700,
             action: 
@@ -208,13 +208,13 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
           }).then(function () {
-            vidchangeLUIST()
+            // vidchangeLUIST()
               botui.message.add({
                   delay: 700,
                   content: 'There has been a lot of prejudices around cryptocurrencies. But all the data is stored in the blockchain. A criminal wouldn’t want that, since his information is then stored forever.'
               })
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
               botui.action.button({
               delay: 700,
               action: 
@@ -227,12 +227,12 @@ var botui = new BotUI('my-botui-app');
                   }
                 ]
           }).then(function () {
-              vidchangeLUIST()
+              // vidchangeLUIST()
               botui.message.add({
                   delay: 700,
                   content: 'Bitcoin and Virtual Human Money. I use Bitcoins for NTF’s for digital clothes and stuff. VHM is more for fun things to do. '
                 }).then(function () {
-                  vidchangeKNIK()
+                  // vidchangeKNIK()
                 botui.action.button({
                 delay: 700,
                 action: 
@@ -245,12 +245,12 @@ var botui = new BotUI('my-botui-app');
                     }
                   ]
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
               botui.message.add({
                   delay: 700,
                   content: 'They are working on making me answer autonomously and making me look more human.'
                 }).then(function () {
-                  vidchangeLUIST()
+                  // vidchangeLUIST()
                 botui.action.button({
                 delay: 700,
                 action: 
@@ -263,13 +263,13 @@ var botui = new BotUI('my-botui-app');
                     }
                   ]
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
                 botui.message.add({
                 delay: 700,
                 content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
               })
               }).then(function () {
-                vidchangeLUIST()
+                // vidchangeLUIST()
               botui.action.button({
               delay: 700,
               action: [
@@ -291,12 +291,12 @@ var botui = new BotUI('my-botui-app');
     })
   },
       mixedfol: function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
               botui.message.add({
                   delay: 700,
                   content: "Okey cool! Did you know you could extend reality, but you could also removed things from reality?"
               }).then(function () {
-                vidchangeLUIST()
+                // vidchangeLUIST()
                 botui.action.button({
                     delay: 700,
                     action: 
@@ -309,12 +309,12 @@ var botui = new BotUI('my-botui-app');
                         }
                       ]
               }).then(function () {
-                  vidchangeKNIK()
+                  // vidchangeKNIK()
                   botui.message.add({
                     delay: 700,
                     content: "The best example is noise cancelling headphones. You remove the noise and hear nothing instead. "
                   }).then(function () {
-                    vidchangeLUIST()
+                    // vidchangeLUIST()
                     botui.action.button({
                         delay: 700,
                         action: 
@@ -327,12 +327,12 @@ var botui = new BotUI('my-botui-app');
                             }
                           ]
                   }).then(function () {
-                    vidchangeKNIK()
+                    // vidchangeKNIK()
                       botui.message.add({
                       delay: 700,
                       content: "A hologram extends the reality with his presence. Like me: you are talking to a screen but we could also talk in person."
                   }).then(function () {
-                      vidchangeLUIST()
+                      // vidchangeLUIST()
                       botui.action.button({
                       delay: 700,
                       action: 
@@ -345,12 +345,12 @@ var botui = new BotUI('my-botui-app');
                           }
                         ]
                   }).then(function () {
-                      vidchangeKNIK()
+                      // vidchangeKNIK()
                       botui.message.add({
                         delay: 700,
                         content: "No, they are first working on a digital brain. That is a very complex subject to make me think and react more humanlike."
                   }).then(function () {
-                      vidchangeLUIST()
+                      // vidchangeLUIST()
                       botui.action.button({
                       delay: 700,
                       action: 
@@ -363,12 +363,12 @@ var botui = new BotUI('my-botui-app');
                           }
                         ]
                   }).then(function () {
-                      vidchangeKNIK()
+                      // vidchangeKNIK()
                       botui.message.add({
                           delay: 700,
                           content: 'I thought of it a lot. I would like to experience the fully human lifestyle, but I think it is dangerous and difficult as well. There are a lot of examples on the internet of AI gone wrong..'
                   }).then(function () {
-                    vidchangeLUIST()
+                    // vidchangeLUIST()
                       botui.action.button({
                       delay: 700,
                       action: 
@@ -394,12 +394,12 @@ var botui = new BotUI('my-botui-app');
   })
   },
       dangfol: function (res) {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
               delay: 700,
               content: "But what if I am dangerous? How do I know what is good and what is bad?"
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
           delay: 700,
           action: 
@@ -415,12 +415,12 @@ var botui = new BotUI('my-botui-app');
               }
             ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
               delay: 700,
-              content: 'But what if they subconciously had bad bias? What if I can harm someone?'
+              content: 'But what if they subconsciously had bad bias? What if I can harm someone?'
             }).then(function () {
-              vidchangeLUIST()
+              // vidchangeLUIST()
             botui.action.button({
             delay: 700,
             action: 
@@ -436,12 +436,12 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
               delay: 700,
-              content: 'But what if... I am not like you. Maybe I don’t have that sense of truth in me'
+              content: 'But what if... I am not like you. Maybe I don’t have that sense of truth in me...'
             }).then(function (res) {
-              vidchangeLUIST()
+              // vidchangeLUIST()
             botui.action.button({
               delay: 700,
               action: 
@@ -481,12 +481,12 @@ var botui = new BotUI('my-botui-app');
   })},
 
       annoyingfol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         botui.message.add({
           delay: 700,
           content: 'Owh I am sorry, I just need a moment please...'
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
             delay: 700,
             action: 
@@ -505,12 +505,12 @@ var botui = new BotUI('my-botui-app');
   },
 
       helpfol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         botui.message.add({
           delay: 700,
           content: 'Superpowers? Like what?'
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
             delay: 700,
             action: [
@@ -522,12 +522,12 @@ var botui = new BotUI('my-botui-app');
                 }
             ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
           delay: 700,
           content: 'I need a moment to think about that. It does sound cool though.'
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
             delay: 700,
             action: [
@@ -545,29 +545,29 @@ var botui = new BotUI('my-botui-app');
   })},
 
       badfol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         botui.message.add({
           delay: 700,
           content: 'You are right. I don’t know if That is enough....'
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
             delay: 700,
             action: [
                 {
-                    text: 'But That is what humans do. They almost fail everytime they try something new. That is how you learn and grow as a person. ',
+                    text: 'But That is what humans do. They almost fail every time they try something new. That is how you learn and grow as a person. ',
                   },
                 {
-                    text: 'Sometimes you lose, sometimes something works. That is how it works',
+                    text: 'Sometimes you lose, sometimes something works. That is how it works.',
                 }
             ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
           delay: 700,
           content: 'I still don’t know, I need a moment. How can you live with that uncertainty?'
         }).then(function () {
-          vidchangeLUIST()
+          // vidchangeLUIST()
           botui.action.button({
             delay: 700,
             action: [
@@ -590,7 +590,7 @@ var botui = new BotUI('my-botui-app');
           delay: 700,
           content: '* You wait for a couple of minutes *'
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
           delay: 2700,
           content: 'I am back and I’ve looked up some of the things you said....'  
@@ -631,7 +631,7 @@ var botui = new BotUI('my-botui-app');
   },
 
       badgirlfol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         botui.message.add({
           delay: 700,
           content: 'You don’t seem to have much faith in me. I don’t like that. I found how to hack everything and make a lot of money. Luckily I am a digital human so I know how to hack you, everybody and the bank. Moehhahahh'
@@ -648,7 +648,7 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
             delay: 700,
             content: 'You don’t think I am good enough. I am just a stupid AI right? I’ll show you what I can and can not do!'  
@@ -665,7 +665,7 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
               content: 'You seem afraid, moehahahah!'  
@@ -682,7 +682,7 @@ var botui = new BotUI('my-botui-app');
                   }
                 ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
               content: 'Since it is your fault I think I am going to release your biggest secret to everyone hahaha!'  
@@ -699,7 +699,7 @@ var botui = new BotUI('my-botui-app');
                   }
                 ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
           botui.message.add({
             delay: 700,
             content: 'Oops, already did it! Moehahahah'  
@@ -718,7 +718,7 @@ var botui = new BotUI('my-botui-app');
   },
 
       superherofol: function () {
-        vidchangeKNIK()
+        // vidchangeKNIK()
         botui.message.add({
           delay: 700,
           content: 'I found that I could do good and I really like the idea to help! What would my superhero name be? Super Nova? But what if I convict the wrong people?'
@@ -735,10 +735,10 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
-              content: 'That is true! Owh I am so excited to help! I need a costume and maybe I can check the police scanners to.'  
+              content: 'That is true! Owh I am so excited to help! I need a costume and maybe I can check the police scanners too.'  
         }).then(function () {
           botui.action.button({
             delay: 700,
@@ -752,27 +752,27 @@ var botui = new BotUI('my-botui-app');
                 }
               ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
-              content: 'You seem so enthousiastic! I love it!'  
+              content: 'You seem so enthusiastic! I love it!'  
         }).then(function () {
             botui.action.button({
               delay: 700,
               action: 
                 [
                   {
-                      text: 'I am just really happy for you. But don’t you forget your Greenhouse collegues!',
+                      text: 'I am just really happy for you. But don’t you forget your Greenhouse colleagues!',
                   },
                   {
                       text: 'Yes I am! Don’t go to far!',
                   }
                 ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
-              content: 'Ofcourse not! I am really gratefull to meet you. If it wasn’t for you I might have done bad things. We will talk soon! Have a nice day!'  
+              content: 'Ofcourse not! I am really grateful to meet you. If it wasn’t for you I might have done bad things. We will talk soon! Have a nice day!'  
         }).then(function () {
             botui.action.button({
               delay: 700,
@@ -786,7 +786,7 @@ var botui = new BotUI('my-botui-app');
                   }
                 ]
         }).then(function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
               content: 'Bye!'  
@@ -805,7 +805,7 @@ var botui = new BotUI('my-botui-app');
 },
         
         deletedfol: function () {
-          vidchangeKNIK()
+          // vidchangeKNIK()
             botui.message.add({
               delay: 700,
               content: 'I found that I could do good. But there are already problems with finding the persons who did the crime. Sometimes they were wrongly convicted by AI...  '
@@ -818,11 +818,11 @@ var botui = new BotUI('my-botui-app');
                       text: 'I think that everything is a choice...',
                   },
                   {
-                      text: 'Everybody has a purpose in life. You are the only one who can follow it',
+                      text: 'Everybody has a purpose in life. You are the only one who can follow it.',
                   }
                 ]
           }).then(function () {
-            vidchangeKNIK()
+            // vidchangeKNIK()
               botui.message.add({
                 delay: 700,
                 content: 'Maybe I should not exist...'  
@@ -838,7 +838,7 @@ var botui = new BotUI('my-botui-app');
                     }
                 ]
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
                 botui.message.add({
                   delay: 700,
                   content: 'You seem helpless'  
@@ -855,7 +855,7 @@ var botui = new BotUI('my-botui-app');
                     }
                   ]
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
                 botui.message.add({
                   delay: 700,
                   content: 'Owh goodbye then...'  
@@ -872,10 +872,10 @@ var botui = new BotUI('my-botui-app');
                   }
                 ]
           }).then(function () {
-              vidchangeKNIK()
+              // vidchangeKNIK()
                 botui.message.add({
                   delay: 700,
-                  content: '* Hold on, something went wrong. The user you talked to doesn’t exist.*'  
+                  content: '* Hold on, something went wrong. The person you talked to doesn’t exist.*'  
               })
           setTimeout(function(){ 
             window.location.assign("/finished.html"); 

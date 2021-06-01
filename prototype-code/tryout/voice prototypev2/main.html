@@ -15,10 +15,10 @@
       </div>
 
       <div class="camview">
-        <video id="myVideo" width="1080" autoplay loop>
-          <source src="includes/whole.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
+        <iframe width="1040px" height="594px" allow="camera; fullscreen" src="https://www.trulience.com/avatar/8056288527266237139" frameborder="0" allowfullscreen>
+        </iframe>
+
+        <video id="video" height="560" width="720" autoplay muted></video>
     </div>
 
       <div class="sidebar">
@@ -29,6 +29,9 @@
           </div>
       </div>
 
+
+      <script src="js/face-api.min.js"></script>
+      <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
     <script src="build/botui.min.js"></script>
     <script src="main.js"></script>

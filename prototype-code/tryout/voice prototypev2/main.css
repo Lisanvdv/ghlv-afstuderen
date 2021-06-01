@@ -4,6 +4,12 @@ body{
     overflow: hidden;
     color: #1e1e1e;
     background-color: #161616;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 .header{
@@ -115,3 +121,8 @@ h1, h2, h3, h4, h5, h6, p, a{
 #videoElement video{
     width: 340px;
 }
+
+canvas {
+    position: absolute;
+  }
+  
