@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="build/botui.mis.css" />
     <link rel="stylesheet" href="build/botui-theme-default.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -15,7 +16,7 @@
       </div>
 
       <div class="camview">
-        <iframe width="1040px" height="594px" allow="camera; fullscreen" src="https://www.trulience.com/avatar/8056288527266237139" frameborder="0" allowfullscreen>
+        <iframe width="1040px" height="594px" allow="camera" src="https://www.trulience.com/avatar/8056288527266237139" onload="hoi()" src="main.js" frameborder="0" allowfullscreen>
         </iframe>
 
         <video id="video" height="120" width="240" autoplay muted></video>

@@ -3,6 +3,12 @@ const video = document.getElementById("video");
 let predictedAges = [];
 var emotion;
 
+function hoi(){
+
+}
+
+
+
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
@@ -54,7 +60,7 @@ var botui = new BotUI('my-botui-app');
   }).then(function (res) { // will be called when it is submitted.
     // vidchangeKNIK()
     botui.message.add({
-    content: 'Nice to meet you, ' + res.value + '! How are you? you are'
+    content: 'Nice to meet you, ' + res.value + '! How are you?'
   })
   }).then(function () {
     // vidchangeLUIST()
